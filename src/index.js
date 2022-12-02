@@ -14,7 +14,7 @@ import { getError } from "./store/errors";
 
 const store = configureStore();
 
-const App = (params) => {
+const App = () => {
   const state = useSelector(getTasks());
   const isLoading = useSelector(getTasksLoadingStatus());
   const error = useSelector(getError());

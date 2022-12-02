@@ -33,6 +33,7 @@ const taskSlice = createSlice({
         },
     },
 });
+
 const { actions, reducer: taskReducer } = taskSlice;
 const { update, remove, recived, taskRequested, taskRequestFailed } = actions;
 
@@ -53,10 +54,11 @@ export const completeTask = (id) => (dispatch, getState) => {
 
 export function titleChanged(id) {
     return update({ id, title: `New title for ${id}` });
-}
+};
+
 export function taskDeleted(id) {
     return remove({ id });
-}
+};
 
 export const getTasks = () => (state) => state.tasks.entities;
 export const getTasksLoadingStatus = () => (state) => state.tasks.isLoading;

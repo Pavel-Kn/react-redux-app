@@ -1,4 +1,5 @@
 import httpService from "./http.service";
+
 const todosEndepoint = "todos/";
 const todosService = {
     fetch: async () => {
@@ -9,6 +10,7 @@ const todosService = {
             },
         });
         return data;
-    },
+    }
 };
+
 export default todosService;

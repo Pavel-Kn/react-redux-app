@@ -6,7 +6,7 @@ import errorReducer from './errors';
 const rootReducer = combineReducers({
     errors: errorReducer,
     tasks: taskReducer
-})
+});
 
 function createStore() {
     return configureStore({
@@ -15,6 +15,6 @@ function createStore() {
             getDefaultMiddleware().concat(logger),
             devTools: process.env.NODE_ENV !== 'production'
     })
-}
+};
 
 export default createStore;
